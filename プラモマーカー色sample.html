@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>プラモマーカー色Sample</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0"
+    />
+  </head>
+
+  <body>
+    <div class="top" id="top_">
+      <div class="topText">
+        <form action="#" method="post">
+          <p class="label">上背景色</p>
+          <input
+            type="color"
+            name="topCode"
+            value="#000000"
+            onchange="document.getElementById('top_').style.backgroundColor=value;"
+          />
+        </form>
+      </div>
+      <div class="colorBarT" id="colorBarT_">
+        <div class="colorBarLText">
+          <form action="#" method="post">
+            <input
+              type="color"
+              name="colorBarTCode"
+              value="#ffcf00"
+              onchange="document.getElementById('colorBarT_').style.backgroundColor=value;"
+            />
+            <input
+              type="range"
+              list="tickmarks"
+              name="colorBarTOpacityValue"
+              min="0.3"
+              max="1"
+              step="0.01"
+              value="0.9"
+              onchange="document.getElementById('colorBarT_').style.opacity=value;colorBarTOpacityValues.value=value;"
+            />
+            <datalist id="tickmarks">
+              <option value="0.3"></option>
+              <option value="0.4"></option>
+              <option value="0.5"></option>
+              <option value="0.6"></option>
+              <option value="0.7"></option>
+              <option value="0.8"></option>
+              <option value="0.9"></option>
+              <option value="1"></option>
+            </datalist>
+
+            <output name="colorBarTOpacityValues">0.9</output>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom" id="bottom_">
+      <div class="bottomText">
+        <form action="#" method="post">
+          <p class="label">下背景色</p>
+          <input
+            type="color"
+            name="bottomCode"
+            value="#FFFFFF"
+            onchange="document.getElementById('bottom_').style.backgroundColor=value;"
+          />
+        </form>
+      </div>
+      <div class="colorBarB" id="colorBarB_">
+        <div class="colorBarBText">
+          <form action="#" method="post">
+            <input
+              type="color"
+              name="colorBarBCode"
+              value="#ffcf00"
+              onchange="document.getElementById('colorBarB_').style.backgroundColor=value;"
+            />
+            <input
+              type="range"
+              list="tickmarks"
+              name="colorBarBOpacityValue"
+              min="0.3"
+              max="1"
+              step="0.01"
+              value="0.9"
+              onchange="document.getElementById('colorBarB_').style.opacity=value;colorBarBOpacityValues.value=value;"
+            />
+            <datalist id="tickmarks">
+              <option value="0.3"></option>
+              <option value="0.4"></option>
+              <option value="0.5"></option>
+              <option value="0.6"></option>
+              <option value="0.7"></option>
+              <option value="0.8"></option>
+              <option value="0.9"></option>
+              <option value="1"></option>
+            </datalist>
+
+            <output name="colorBarBOpacityValues">0.9</output>
+          </form>
+        </div>
+      </div>
+    </div>
+    <style type="text/css">
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 0.5em;
+        margin-bottom: 0.3em;
+      }
+
+      .label {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 0.5em;
+        margin-bottom: 0.3em;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .bottom {
+        text-align: center;
+        height: 50vh;
+        background-color: #fff;
+        z-index: 0;
+      }
+
+      .bottomText {
+        padding: 10px;
+        z-index: 2;
+        /* background-color: rgba(255, 255, 255, .3) */
+      }
+
+      .top {
+        text-align: center;
+        height: 50vh;
+        background-color: #000;
+        z-index: 0;
+      }
+
+      .topText {
+        padding: 10px;
+        z-index: 2;
+        /* background-color: rgba(255, 255, 255, .3) */
+      }
+
+      .colorBarT {
+        text-align: center;
+        position: relative;
+        width: 75%;
+        top: 30%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        background-color: #ffcf00;
+        opacity: .9;
+        z-index: 1;
+      }
+
+      .colorBarB {
+        position: relative;
+        width: 75%;
+        top: 30%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        background-color: #ffcf00;
+        opacity: .9;
+        z-index: 1;
+      }
+
+      @media screen and (max-width: 460px) {
+        .bottomText {
+          height: 90px;
+          padding: 10px;
+          z-index: 2;
+        }
+
+        .topText {
+          height: 90px;
+          padding: 10px;
+          z-index: 2;
+        }
+      }
+    </style>
+  </body>
+</html>
